@@ -59,6 +59,8 @@ case "$opcao" in
     4)
         echo "Conectando ao PDV 4..."
         sshpass -p 'zanthus' ssh -o StrictHostKeyChecking=no root@192.168.114.104
+
+        cd /
         # Verifique se o arquivo já existe
         if [ ! -f "$ARQUIVO" ]; then
             echo "O arquivo $ARQUIVO não foi encontrado. Baixando..."
@@ -168,3 +170,4 @@ case "$opcao" in
         echo "Opção inválida."
         ;;
 esac
+
